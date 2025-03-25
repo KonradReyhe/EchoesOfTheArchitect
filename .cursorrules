@@ -1,0 +1,114 @@
+# .cursorrules for Echoes of the Architect
+
+# === GENERAL GUIDELINES ===
+* Write clean, documented code that reflects the spiritual nature of the game
+* Use consistent naming conventions across all files
+* Add type hints and docstrings for all new methods
+* Handle asset loading errors gracefully
+* Log meaningful debug messages during development
+* Test all soul state interactions thoroughly
+
+# === PROJECT STRUCTURE ===
+/assets
+  /images
+    /backgrounds    # 1280x720 scene backgrounds
+    /cutouts       # PNG sprites with transparency
+    /inventory     # 64x64 item icons
+/engine
+  scene_base.py    # Abstract base class for scenes
+  inventory.py     # Item management system
+  ui.py           # Message and ChoiceBox classes
+  serpent_within.py # Inner state manifestation
+/scenes
+  garden.py       # Scene 1: First moral choice
+  mirrors.py      # Scene 2: Soul reflection
+  field.py        # Scene 3: Divine silence
+  gate.py         # Scene 4: Judgment
+  chamber.py      # Scene 5: Final state
+  serpent.py      # Scene 6: Inner confrontation
+
+# === SCENE IMPLEMENTATION RULES ===
+1. Each scene must inherit from Scene base class
+2. Required methods:
+   - load_assets()
+   - handle_event()
+   - update(dt)
+   - draw(screen)
+3. Use consistent positioning:
+   - Messages: (40, SCREEN_HEIGHT - 100)
+   - Choice boxes: (40, SCREEN_HEIGHT - 150)
+   - Inventory: Bottom right
+4. Handle transitions properly using update_transition(dt)
+
+# === SOUL STATE TRACKING ===
+Track in game_state.py:
+* light_score: int  # Increases with virtuous choices
+* sin_score: int    # Increases with selfish choices
+* memory_of_form: bool  # Set by prayer/meditation
+* inner_serpent: str  # "pride"|"envy"|"apathy"|"purified"
+
+# === INVENTORY GUIDELINES ===
+* Item names: snake_case (e.g., golden_fruit)
+* Image paths: assets/images/inventory/{item_name}.png
+* Standard size: 64x64 pixels
+* Max slots: 5 items
+
+# === UI STANDARDS ===
+Messages:
+* Font: Georgia, 28pt
+* Duration: 5.0 seconds
+* Background: Semi-transparent black (alpha 160)
+* Text color: Warm white (255, 240, 200)
+
+Choice Boxes:
+* Font: Georgia, 28pt
+* Max options: 4 per box
+* Background: Semi-transparent black (alpha 128)
+* Selected color: (255, 255, 0)
+
+# === ASSET NAMING ===
+Backgrounds: background_{scene_name}.png
+Cutouts: {object_name}.png
+Inventory: {item_name}.png
+Variations: {base_name}_{state}.png
+
+# === DEBUG FEATURES ===
+* Use __debug__ for development visuals
+* Log asset loading and state changes
+* Show clickable areas when debugging
+* Print inventory changes to console
+
+# === SPIRITUAL MECHANICS ===
+* All choices must have meaningful consequences
+* Track and react to player's moral state
+* Use symbolic imagery consistently
+* Maintain allegorical meaning in puzzles
+
+# === CODE STYLE ===
+* Use PEP 8 conventions
+* Add docstrings to all classes and methods
+* Include type hints for parameters
+* Keep methods focused and single-purpose
+* Use consistent indentation (4 spaces)
+
+# === ERROR HANDLING ===
+* Gracefully handle missing assets
+* Provide fallback behaviors
+* Log errors meaningfully
+* Maintain game state consistency
+
+# === TESTING GUIDELINES ===
+* Test all scene transitions
+* Verify soul state tracking
+* Check inventory interactions
+* Validate choice consequences
+* Test asset loading paths
+
+# === VERSION CONTROL ===
+* Commit messages: Start with verb (Add, Fix, Update)
+* Reference issue numbers when applicable
+* Keep commits focused and atomic
+* Document major changes
+
+Remember: This is a spiritual journey, not just a game.
+Every mechanic should serve the allegorical meaning. 
