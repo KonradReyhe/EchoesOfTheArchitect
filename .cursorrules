@@ -20,12 +20,14 @@
   ui.py           # Message and ChoiceBox classes
   serpent_within.py # Inner state manifestation
 /scenes
-  garden.py       # Scene 1: First moral choice
-  mirrors.py      # Scene 2: Soul reflection
-  field.py        # Scene 3: Divine silence
-  gate.py         # Scene 4: Judgment
-  chamber.py      # Scene 5: Final state
-  serpent.py      # Scene 6: Inner confrontation
+  start_screen.py  # Title and game start
+  garden.py        # Scene 1: First moral choice
+  temple.py        # Scene 2: Sacred architecture
+  house_of_mirrors.py # Scene 3: Soul reflection
+  bridge.py        # Scene 4: Path of trials
+  caduceus.py      # Scene 5: Balance of forces
+  dragon.py        # Scene 6: Material attachment
+  serpent_room.py  # Scene 7: Final transformation
 
 # === SCENE IMPLEMENTATION RULES ===
 1. Each scene must inherit from Scene base class
@@ -35,9 +37,9 @@
    - update(dt)
    - draw(screen)
 3. Use consistent positioning:
-   - Messages: (40, SCREEN_HEIGHT - 100)
-   - Choice boxes: (40, SCREEN_HEIGHT - 150)
-   - Inventory: Bottom right
+   - Messages: (40, 20)  # Top of screen
+   - Choice boxes: (40, 130)  # Below messages
+   - Inventory: Top right (20px from top)
 4. Handle transitions properly using update_transition(dt)
 
 # === SOUL STATE TRACKING ===

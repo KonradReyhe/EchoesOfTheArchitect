@@ -1,0 +1,54 @@
+Puzzle Plans for Echoes of the Architect
+
+1. Puzzle: Aligning Sacred Geometry
+   - Scene: Temple
+   - Objective: Align the sacred geometric patterns to unlock the next stage of the game.
+   - Required Player Actions:
+     - Interact with the bell tower and pillars to adjust their positions.
+     - Observe visual cues indicating correct alignment.
+   - Solutions and Outcomes:
+     - Successfully aligning the patterns reveals a hidden path and increases the player's divine awareness score.
+   - Thematic Significance:
+     - Represents the idea that understanding divine patterns leads to enlightenment.
+   - Visual and Audio Elements:
+     - Visual: Sacred geometry patterns appear on the ground.
+     - Audio: A bell sound plays when the puzzle is solved.
+
+2. Puzzle: Healing the Withered Tree
+   - Scene: Garden
+   - Objective: Restore the withered tree to its former glory.
+   - Required Player Actions:
+     - Use the golden fruit from the inventory on the tree.
+   - Solutions and Outcomes:
+     - The tree blossoms, revealing a hidden path and increasing the player's light score.
+   - Thematic Significance:
+     - Symbolizes the power of virtuous choices and the restoration of life.
+   - Visual and Audio Elements:
+     - Visual: The tree transforms from withered to vibrant.
+     - Audio: A soft chime plays as the tree is healed.
+
+3. Puzzle: Confronting the Serpent
+   - Scene: Serpent Room
+   - Objective: Confront the inner serpent and make a choice.
+   - Required Player Actions:
+     - Choose to name, rebuke, or remain silent about the serpent.
+   - Solutions and Outcomes:
+     - Each choice leads to different consequences, affecting the player's light and sin scores.
+   - Thematic Significance:
+     - Represents the struggle between acknowledging one's flaws and ignoring them.
+   - Visual and Audio Elements:
+     - Visual: The serpent's appearance changes based on the player's choice.
+     - Audio: Different sound effects play based on the choice made.
+
+4. Puzzle: Balancing the Twin Serpents
+   - Scene: Caduceus Scene
+   - Objective: Align the twin serpents to restore balance.
+   - Required Player Actions:
+     - Interact with the serpents to adjust their positions.
+   - Solutions and Outcomes:
+     - Successfully balancing the serpents leads to a transformation and increases the player's divine awareness.
+   - Thematic Significance:
+     - Represents the balance of wisdom and ignorance.
+   - Visual and Audio Elements:
+     - Visual: The serpents glow when balanced.
+     - Audio: A harmonious sound plays when the balance is achieved.

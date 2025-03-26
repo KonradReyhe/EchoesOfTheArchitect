@@ -1,15 +1,14 @@
 import pygame
 from settings import SCREEN_WIDTH, SCREEN_HEIGHT
+from engine.scene_base import Scene
 
-class StartScreen:
-    def __init__(self, scene_manager):
-        self.scene_manager = scene_manager
-        self.background = pygame.image.load("assets/images/backgrounds/title_screen.png")
-        # Scale background to fit screen
-        self.background = pygame.transform.scale(self.background, (SCREEN_WIDTH, SCREEN_HEIGHT))
+class StartScreen(Scene):
+    def __init__(self, game_state, scene_manager):
+        super().__init__(game_state, scene_manager)
         self.font = pygame.font.SysFont("georgia", 64)
-        self.small_font = pygame.font.SysFont("georgia", 32)  # Made slightly larger
+        self.small_font = pygame.font.SysFont("georgia", 32)
         self.clicked = False
+        self.preload()
 
     def draw_text_with_shadow(self, screen, text, font, color, position):
         # Draw dark background box
@@ -33,22 +32,21 @@ class StartScreen:
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             self.clicked = True
 
-    def update(self):
+    def update(self, dt):
+        """Update scene state"""
         if self.clicked:
-            from scenes.garden import GardenScene
-            from game_state import GameState
-            game_state = GameState()
-            self.scene_manager.switch_to(GardenScene(game_state, self.scene_manager))
+            self.scene_manager.switch_to("garden")
+        self.update_transition(dt)
 
     def draw(self, screen):
+        """Draw scene contents"""
         screen.blit(self.background, (0, 0))
-
-        # Draw text with shadow boxes
+        
         self.draw_text_with_shadow(
             screen,
             "Echoes of the Architect",
             self.font,
-            (255, 240, 200),  # Warm white color
+            (255, 240, 200),
             180
         )
 
@@ -64,9 +62,14 @@ class StartScreen:
             screen,
             "Click to begin",
             self.small_font,
-            (200, 200, 255),  # Slight blue tint
+            (200, 200, 255),
             500
         )
+
+    def load_assets(self):
+        """Load all scene-specific assets"""
+        self.background = pygame.image.load("assets/images/backgrounds/title_screen.png")
+        self.background = pygame.transform.scale(self.background, (SCREEN_WIDTH, SCREEN_HEIGHT))
 
 # Make sure the class is available for import
 __all__ = ['StartScreen'] 
